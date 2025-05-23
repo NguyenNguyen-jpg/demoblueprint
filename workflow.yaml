@@ -1,0 +1,15 @@
+# azure-pipelines.yml
+trigger: none  # Manual or API trigger only
+
+parameters:
+  - name: triggerMessage
+    type: string
+    default: "No message provided"
+
+jobs:
+- job: ShowBody
+  steps:
+    - script: |
+        echo "=== Pipeline Triggered ==="
+        echo "Message body: ${{ parameters.message }}"
+      displayName: "Print Trigger Message"
