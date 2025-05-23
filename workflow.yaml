@@ -2,7 +2,7 @@
 trigger: none  # Manual or API trigger only
 
 parameters:
-  - name: triggerMessage
+  - name: message
     type: string
     default: "No message provided"
 
